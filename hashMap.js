@@ -1,6 +1,7 @@
 const { log } = require("node:console");
 const SLinkedList = require("../TOP-linked-list/singleLinkedList.js");
 const { inspect } = require("node:util");
+const { link } = require("node:fs");
 
 const HashMap = class {
     #LOAD_FACTOR = 0.85; // It will determine when it is a good time to grow buckets array
@@ -179,6 +180,14 @@ const HashMap = class {
         });
 
         return length;
+    }
+
+    clear() {
+        /**
+         * removes all entries in the hash map.
+         */
+
+        this.hashes = Array(16);
     }
 };
 

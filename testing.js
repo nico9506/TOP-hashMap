@@ -51,3 +51,8 @@ hmTest.set("13", "Value Test");
 // console.log(`Beer: ${hmTest.remove("Beer")}`);
 // console.log(`Harry: ${hmTest.remove("Harry")}`);
 // console.log(hmTest.length());
+
+// removes all entries in the hash map.
+console.log(hmTest.length());
+hmTest.clear();
+console.log(hmTest.length());
