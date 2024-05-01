@@ -107,6 +107,26 @@ const HashMap = class {
 
         this.#addNewItem(key, value);
     }
+
+    get(key) {
+        /**
+         *  takes one argument as a key and returns the value that is assigned to this key. If a key is not found, return null.
+         */
+    }
+
+    has(key) {
+        /**
+         * takes a key as an argument and returns true or false based on whether or not the key is in the hash map.
+         */
+
+        let tempNode = this.hashes[this.#hash(key)].head();
+        while (tempNode !== undefined) {
+            if (Object.keys(tempNode.value)[0] === key) return true;
+            tempNode = tempNode.nextNode;
+        }
+
+        return false;
+    }
 };
 
 exports.HashMap = HashMap;
