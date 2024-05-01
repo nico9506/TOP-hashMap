@@ -138,6 +138,28 @@ const HashMap = class {
 
         return false;
     }
+
+    remove(key) {
+        /**
+         * takes a key as an argument. If the given key is in the hash map, it should remove the entry with that key and return true. If the key isn’t in the hash map, it should return false.
+         */
+
+        if (this.has(key)) {
+            const selectedLList = this.hashes[this.#hash(key)];
+            let tempNode = selectedLList.head();
+            let index = 0;
+            while (tempNode !== undefined) {
+                if (Object.keys(tempNode.value)[0] === key) {
+                    selectedLList.removeAt(index);
+                    return true;
+                }
+                index++;
+                tempNode = tempNode.nextNode;
+            }
+        } else {
+            return false;
+        }
+    }
 };
 
 exports.HashMap = HashMap;
