@@ -1,3 +1,4 @@
+const { log } = require("node:console");
 const SLinkedList = require("../TOP-linked-list/singleLinkedList.js");
 const { inspect } = require("node:util");
 
@@ -65,7 +66,7 @@ const HashMap = class {
 
         if (this.hashes[hash] === undefined) {
             this.hashes[hash] = new SLinkedList();
-            this.hashes[hash].append({ key: value });
+            this.hashes[hash].append({ [key]: value });
             return;
         } else {
             let nodeFound = false;
@@ -79,7 +80,7 @@ const HashMap = class {
                 tempNode = tempNode.nextNode;
             }
 
-            this.hashes[hash].append({ key: value });
+            this.hashes[hash].append({ [key]: value });
             return;
         }
     }
@@ -88,7 +89,13 @@ const HashMap = class {
         let printable = "";
 
         this.hashes.forEach((linkedL) => {
-            printable += ` * (${linkedL}) \n`;
+            let tempNode = linkedL.head();
+            printable += `* `;
+            while (tempNode !== undefined) {
+                printable += `(${JSON.stringify(tempNode.value)}) -->`;
+                tempNode = tempNode.nextNode;
+            }
+            printable += `\n`;
         });
 
         return printable;
