@@ -189,6 +189,25 @@ const HashMap = class {
 
         this.hashes = Array(16);
     }
+
+    keys() {
+        /**
+         * returns an array containing all the keys inside the hash map.
+         */
+        const arrayOfKeys = [];
+
+        this.hashes.forEach((linkedList) => {
+            if (linkedList !== undefined) {
+                let tempNode = linkedList.head();
+                while (tempNode !== undefined) {
+                    arrayOfKeys.push(Object.keys(tempNode.value)[0]);
+                    tempNode = tempNode.nextNode;
+                }
+            }
+        });
+
+        return arrayOfKeys;
+    }
 };
 
 exports.HashMap = HashMap;
