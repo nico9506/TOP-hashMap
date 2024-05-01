@@ -58,8 +58,15 @@ hmTest.set("13", "Value Test");
 // console.log(hmTest.length());
 
 // Gives all the current keys in a array
-console.log(hmTest.keys());
-console.log(`13: ${hmTest.remove("13")}`);
-console.log(`Beer: ${hmTest.remove("Beer")}`);
-console.log(`Harry: ${hmTest.remove("Harry")}`);
-console.log(hmTest.keys());
+// console.log(hmTest.keys());
+// console.log(`13: ${hmTest.remove("13")}`);
+// console.log(`Beer: ${hmTest.remove("Beer")}`);
+// console.log(`Harry: ${hmTest.remove("Harry")}`);
+// console.log(hmTest.keys());
+
+// Gives all the current values in a array
+// console.log(hmTest.values());
+// console.log(`13: ${hmTest.remove("13")}`);
+// console.log(`Beer: ${hmTest.remove("Beer")}`);
+// console.log(`Harry: ${hmTest.remove("Pizza")}`);
+// console.log(hmTest.values());

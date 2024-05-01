@@ -208,6 +208,28 @@ const HashMap = class {
 
         return arrayOfKeys;
     }
+
+    values() {
+        /**
+         * returns an array containing all the values.
+         */
+
+        const arrayOfValues = [];
+
+        this.hashes.forEach((linkedList) => {
+            if (linkedList !== undefined) {
+                let tempNode = linkedList.head();
+                while (tempNode !== undefined) {
+                    arrayOfValues.push(
+                        tempNode.value[Object.keys(tempNode.value)[0]]
+                    );
+                    tempNode = tempNode.nextNode;
+                }
+            }
+        });
+
+        return arrayOfValues;
+    }
 };
 
 exports.HashMap = HashMap;
