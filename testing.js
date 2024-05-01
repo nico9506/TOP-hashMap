@@ -38,9 +38,16 @@ hmTest.set("13", "Value Test");
 // console.log(`Harry: ${hmTest.get("Harry")}`);
 
 // If the given key is in the hash map, removes the entry with that key and return true. Otherwise false.
-console.dir(`${hmTest}`);
-console.log(`14: ${hmTest.remove("14")}`);
-console.log(`13: ${hmTest.remove("13")}`);
-console.log(`Beer: ${hmTest.remove("Beer")}`);
-console.log(`Harry: ${hmTest.remove("Harry")}`);
-console.dir(`${hmTest}`);
+// console.dir(`${hmTest}`);
+// console.log(`14: ${hmTest.remove("14")}`);
+// console.log(`13: ${hmTest.remove("13")}`);
+// console.log(`Beer: ${hmTest.remove("Beer")}`);
+// console.log(`Harry: ${hmTest.remove("Harry")}`);
+// console.dir(`${hmTest}`);
+
+// Returns the number of stored keys in the hashmap
+// console.log(hmTest.length());
+// console.log(`13: ${hmTest.remove("13")}`);
+// console.log(`Beer: ${hmTest.remove("Beer")}`);
+// console.log(`Harry: ${hmTest.remove("Harry")}`);
+// console.log(hmTest.length());

@@ -160,6 +160,26 @@ const HashMap = class {
             return false;
         }
     }
+
+    length() {
+        /**
+         * returns the number of stored keys in the hash map.
+         */
+
+        let length = 0;
+
+        this.hashes.forEach((linkedList) => {
+            if (linkedList !== undefined) {
+                let tempNode = linkedList.head();
+                while (tempNode !== undefined) {
+                    length++;
+                    tempNode = tempNode.nextNode;
+                }
+            }
+        });
+
+        return length;
+    }
 };
 
 exports.HashMap = HashMap;
