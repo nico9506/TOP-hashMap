@@ -112,6 +112,17 @@ const HashMap = class {
         /**
          *  takes one argument as a key and returns the value that is assigned to this key. If a key is not found, return null.
          */
+
+        if (this.has(key)) {
+            let tempNode = this.hashes[this.#hash(key)].head();
+            while (tempNode !== undefined) {
+                if (Object.keys(tempNode.value)[0] === key)
+                    return tempNode.value[key];
+                tempNode = tempNode.nextNode;
+            }
+        } else {
+            return null;
+        }
     }
 
     has(key) {
